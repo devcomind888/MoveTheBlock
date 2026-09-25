@@ -1,3 +1,8 @@
+네. 기존의 **지원팀에 문의하라는 문구를 제거**하고, **Google 계정 정보 삭제를 통해 MoveTheBlock 계정 및 관련 데이터 삭제를 요청할 수 있다**는 방식으로 바꾸면 됩니다.
+
+다만 실제로 **Google 계정에서 앱 연결을 삭제하는 것만으로 MoveTheBlock 서버의 게임 데이터까지 삭제되는 구조인지** 확인이 필요합니다. 그 구조가 맞다는 전제로 문구를 수정하면 아래와 같습니다.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +25,7 @@
             padding: 30px;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
         h1 {
@@ -32,8 +37,17 @@
             margin-top: 30px;
         }
 
+        h3 {
+            margin-top: 25px;
+        }
+
         p {
             line-height: 1.7;
+        }
+
+        ul {
+            line-height: 1.8;
+            padding-left: 25px;
         }
 
         .notice {
@@ -67,23 +81,51 @@
     </p>
 
     <p>
-        To request account deletion, please contact the MoveTheBlock
-        support team with the Google account used to sign in to the game
-        and your in-game UID.
+        To request account deletion, please delete the MoveTheBlock
+        account information associated with your Google account.
+        The deletion of the Google account information will initiate
+        the deletion of the associated MoveTheBlock account and game data.
     </p>
 
     <div class="notice">
+
         <strong>Account Deletion Information</strong>
 
         <p>
-            Account deletion may permanently remove your game account
-            and associated game data.
+            When the account deletion request is processed, your
+            MoveTheBlock account and associated game data may be
+            permanently deleted.
         </p>
+
+        <h3>Data That May Be Deleted</h3>
+
+        <ul>
+            <li>MoveTheBlock game account</li>
+            <li>In-game UID and account information</li>
+            <li>Game progress and associated game data</li>
+            <li>Google account information associated with the MoveTheBlock account</li>
+        </ul>
+
+        <h3>Data Retention</h3>
 
         <p>
             Some information may be retained when required by applicable
-            laws or for legitimate business purposes.
+            laws, regulations, security requirements, fraud prevention,
+            or other legitimate business purposes.
         </p>
+
+        <p>
+            Any retained information will be kept only for the period
+            necessary for the applicable purpose.
+        </p>
+
+        <h3>Important Information</h3>
+
+        <p>
+            Account deletion is permanent and cannot be undone.
+            Deleted game progress and associated data cannot be recovered.
+        </p>
+
     </div>
 
     <div class="footer">
@@ -94,3 +136,4 @@
 
 </body>
 </html>
+
